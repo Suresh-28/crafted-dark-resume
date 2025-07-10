@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { AnimatedSection } from './AnimatedSection';
 import { ExternalLink, Github, Eye } from 'lucide-react';
@@ -7,7 +8,8 @@ export const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Modern e-commerce solution built with React, Node.js, and Stripe integration. Features real-time inventory management and advanced analytics.",
-      image: "https://via.placeholder.com/400x250/0D0D0D/00D084?text=E-Commerce+App",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop&crop=entropy&auto=format&q=80",
+      animatedPreview: "https://raw.githubusercontent.com/microsoft/vscode/main/resources/readme/animation.gif",
       technologies: ["React", "Node.js", "TypeScript", "Stripe", "MongoDB"],
       category: "Full Stack",
       status: "Live",
@@ -17,11 +19,25 @@ export const Projects = () => {
       }
     },
     {
-      title: "Task Management Dashboard",
-      description: "Collaborative project management tool with real-time updates, team collaboration features, and advanced reporting capabilities.",
-      image: "https://via.placeholder.com/400x250/0D0D0D/407BFF?text=Dashboard+UI",
-      technologies: ["React", "TypeScript", "Firebase", "Tailwind"],
-      category: "Frontend",
+      title: "AI Chat Dashboard",
+      description: "Intelligent chat application with AI-powered responses, real-time analytics, and advanced conversation management features.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop&crop=entropy&auto=format&q=80",
+      animatedPreview: "https://github.com/microsoft/TypeScript/raw/main/doc/spec.gif",
+      technologies: ["React", "TypeScript", "OpenAI", "WebSocket", "PostgreSQL"],
+      category: "AI/ML",
+      status: "Live",
+      links: {
+        live: "#",
+        github: "#"
+      }
+    },
+    {
+      title: "Cloud Infrastructure Manager",
+      description: "AWS cloud management dashboard with automated deployment pipelines, monitoring, and cost optimization tools.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop&crop=entropy&auto=format&q=80",
+      animatedPreview: "https://github.com/aws/aws-cli/raw/develop/doc/source/_static/cli-demo.gif",
+      technologies: ["React", "AWS", "Docker", "Terraform", "Python"],
+      category: "Cloud",
       status: "Development",
       links: {
         live: "#",
@@ -29,10 +45,11 @@ export const Projects = () => {
       }
     },
     {
-      title: "AI Chat Application",
-      description: "Real-time chat application with AI-powered responses, voice messages, and smart conversation analytics.",
-      image: "https://via.placeholder.com/400x250/0D0D0D/A66DD4?text=AI+Chat+App",
-      technologies: ["Next.js", "OpenAI", "WebSocket", "PostgreSQL"],
+      title: "Generative AI Toolkit",
+      description: "Comprehensive toolkit for prompt engineering and AI model fine-tuning with interactive playground and optimization features.",
+      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=500&fit=crop&crop=entropy&auto=format&q=80",
+      animatedPreview: "https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/imgs/pipeline_demo.gif",
+      technologies: ["Python", "Hugging Face", "React", "FastAPI", "Docker"],
       category: "AI/ML",
       status: "Live",
       links: {
@@ -51,25 +68,30 @@ export const Projects = () => {
               Featured <span className="gradient-text">Projects</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of my recent work showcasing modern web development practices and innovative solutions.
+              A collection of my recent work showcasing AI-driven solutions, cloud infrastructure, and modern web development.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-emerald mx-auto rounded-full mt-6" />
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <AnimatedSection key={index} delay={index * 0.2}>
               <motion.div
                 whileHover={{ y: -10 }}
                 className="card-premium group overflow-hidden"
               >
-                {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
+                {/* Project Image with Animated Preview */}
+                <div className="relative h-64 overflow-hidden">
+                  <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                  />
+                  <motion.img
+                    src={project.animatedPreview}
+                    alt={`${project.title} demo`}
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
