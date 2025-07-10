@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Download, Mail, MapPin, Briefcase, Globe } from 'lucide-react';
 import { TypeWriter } from './TypeWriter';
@@ -6,10 +7,11 @@ import heroBackground from '../assets/hero-background.jpg';
 
 export const Hero = () => {
   const roles = [
-    "Frontend Engineer",
-    "React Developer", 
-    "Web3 Developer",
-    "UI/UX Designer"
+    "Vibe Coder",
+    "Prompt Engineer", 
+    "Generative AI",
+    "AI Developer",
+    "AWS Cloud Engineer"
   ];
 
   return (
@@ -65,7 +67,7 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
         >
-          <span className="gradient-text">Alex Johnson</span>
+          <span className="gradient-text">Suresh</span>
         </motion.h1>
 
         {/* Animated Role */}
@@ -93,8 +95,8 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed"
         >
-          Passionate about creating exceptional digital experiences with modern technologies. 
-          Specialized in React, TypeScript, and cutting-edge web development.
+          Passionate about building intelligent, AI-driven applications that solve real-world problems. 
+          Specialized in Generative AI, Prompt Engineering, and AWS Cloud solutions. Embracing the future of development through vibe coding and automation.
         </motion.p>
 
         {/* Floating Labels */}
