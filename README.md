@@ -1,4 +1,5 @@
-# Welcome to your Lovable project
+# Welcome to your Personal Resume
+<img width="1899" height="922" alt="Screenshot 2025-07-13 140729" src="https://github.com/user-attachments/assets/6bbc2fd1-837f-4309-b67f-61c4b7306588" />
 
 ## Project info
 
