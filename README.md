@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/user-attachments/assets/6bbc2fd1-837f-4309-b67f-61c4b7306588)
+![Screenshot](https://github.com/Suresh-28/crafted-dark-resume/blob/main/Screenshot%202025-07-13%20140729.png)
 
 # Welcome to your Personal Resume
 
